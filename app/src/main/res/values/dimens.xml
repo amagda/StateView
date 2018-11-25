@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="state_view_title_txt_size">22sp</dimen>
+    <dimen name="state_view_subtitle_txt_size">16sp</dimen>
+</resources>

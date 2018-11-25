@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/state_view"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <ImageView
+            android:id="@+id/img_state_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+    <TextView
+            android:id="@+id/title_state_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:textAppearance="@style/TextAppearance.Depoza.Design.Widget.StateView.Title"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"/>
+
+    <TextView
+            android:id="@+id/subtitle_state_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal"
+            android:textAppearance="@style/TextAppearance.Depoza.Design.Widget.StateView.Subtitle"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae felis consectetur, consequat neque sit amet, placerat mauris. Phasellus imperdiet lacus in quam fringilla, condimentum vestibulum dui maximus"/>
+
+    <LinearLayout
+            android:id="@+id/buttons_parent_state_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+</LinearLayout>

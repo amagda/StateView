@@ -1,0 +1,26 @@
+ext {
+    bintrayOrg = 'depoza'
+    bintrayRepo = 'design'
+    bintrayName = 'state-view'
+
+    developerId = 'depoza'
+    developerName = 'Depoza'
+    developerEmail = 'dev@depoza.com'
+
+    libraryName = 'StateView'
+    libraryDescription = 'Android View to display different customizable states (Error, Empty, Permissions and etc.)'
+    libraryGroupId = 'com.depoza.design'
+    libraryArtifact = 'state-view'
+    libraryVersion = '1.0'
+
+    urlSite = 'https://github.com/amagda/StateView'
+    urlVcs = 'https://github.com/amagda/StateView.git'
+    urlIssues = 'https://github.com/amagda/StateView/issues'
+
+    licenseName = 'MIT'
+    licenseUrl = 'http://www.opensource.org/licenses/mit-license.php'
+    allLicenses = ["MIT"]
+}
+
+apply from: '../install.gradle'
+apply from: '../bintray.gradle'

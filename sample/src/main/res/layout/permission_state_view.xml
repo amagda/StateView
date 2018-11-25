@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/title_state_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/img_state_view"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"/>
+
+        <TextView
+                android:id="@+id/subtitle_state_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_state_view"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/img_state_view"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae felis consectetur, consequat neque sit amet, placerat mauris. Phasellus imperdiet lacus in quam fringilla, condimentum vestibulum dui maximus"/>
+
+        <ImageView
+                android:id="@+id/img_state_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="16dp"
+                android:visibility="gone"
+                tools:src="@drawable/ic_permission_state"
+                tools:visibility="visible"/>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/buttons_parent_state_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content_container"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"/>
+</RelativeLayout>

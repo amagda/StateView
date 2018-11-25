@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Depoza.Design.StateView" parent="">
+        <item name="titleTextAppearance">@style/TextAppearance.Depoza.Design.Widget.StateView.Title</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.Depoza.Design.Widget.StateView.Subtitle</item>
+    </style>
+
+    <style name="TextAppearance.Depoza.Design.Widget.StateView.Title" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/state_view_title_txt_size</item>
+        <item name="android:textColor">@color/state_view_title_color</item>
+    </style>
+
+    <style name="TextAppearance.Depoza.Design.Widget.StateView.Subtitle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/state_view_subtitle_txt_size</item>
+        <item name="android:textColor">@color/state_view_subtitle_color</item>
+    </style>
+</resources>
