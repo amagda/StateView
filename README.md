@@ -3,6 +3,8 @@
 
 Android View to display different customizable states (Error, Empty, Permissions and etc.)
 
+<img src="/img/empty_state.png" width="20%" alt="Empty state sample"/>
+
 
 
 ## How to add
@@ -11,8 +13,6 @@ dependencies {
     compile 'com.depoza.design:state-view:X.Y.Z'
 }
 ```
-
-
 
 
 ## How to use
@@ -87,6 +87,9 @@ stateView.buttonClickHandler { state: State, button: Button ->
 
 #### Custom layout
 ###### Useful when you want to save default logic but change layout
+
+<img src="/img/permission_state.png" width="20%" alt="Permission state sample"/>
+
 ```kotlin
 // 1. Create custom view and extends StateView
 // 2. Override method getLayoutResId()
