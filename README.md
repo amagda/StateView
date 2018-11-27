@@ -3,11 +3,11 @@
 
 Android View to display different customizable states (Error, Empty, Permissions and etc.)
 
-<img src="/img/empty_state.png" width="20%" alt="Empty state sample"/>
+<img src="/img/empty_state.png" width="20%" alt="Empty state sample"/> <img src="/img/empty_state_2.png" width="20%" alt="Empty state2 sample"/>
 
 
 
-## How to add
+## Setup
 ```java
 dependencies {
     compile 'com.depoza.design:state-view:X.Y.Z'
