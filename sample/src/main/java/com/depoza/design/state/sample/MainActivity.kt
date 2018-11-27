@@ -19,15 +19,13 @@ class MainActivity : AppCompatActivity() {
         initEmptyStatesView()
         initPermissionStatesView()
 
-        if (savedInstanceState == null) {
-            // Requests to display specific state by tag
-            emptyStatesView.apply("TAG_EMPTY_STATE_1")
-            emptyStatesView.visibility = View.VISIBLE
-        }
+        // Requests to display specific state by tag
+        emptyStatesView.apply("TAG_EMPTY_STATE_1")
+        emptyStatesView.visibility = View.VISIBLE
     }
 
     /**
-     * Example of providing
+     * Example of providing:
      * - available states programmatically
      * - button clicks handler
      */
@@ -40,8 +38,8 @@ class MainActivity : AppCompatActivity() {
         // Provides button clicks handler
         emptyStatesView.buttonClickHandler { state: State, button: Button ->
             when (button.action.value) {
-                "ACTION_EMPTY_STATE_1" -> emptyStatesView.apply("TAG_EMPTY_STATE_1")
-                "ACTION_EMPTY_STATE_2" -> emptyStatesView.apply("TAG_EMPTY_STATE_2")
+                "ACTION_1" -> emptyStatesView.apply("TAG_EMPTY_STATE_2")
+                "ACTION_2" -> emptyStatesView.apply("TAG_EMPTY_STATE_1")
                 "ACTION_PERMISSION_STATES" -> {
                     emptyStatesView.visibility = View.GONE
                     permissionStatesView.visibility = View.VISIBLE
@@ -52,7 +50,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Example of custom StateView with providing
+     * Example of custom StateView with providing:
      * - available states via attribute 'states_provider' declaration into the layout xml-file
      * - button clicks handler
      */
@@ -62,8 +60,8 @@ class MainActivity : AppCompatActivity() {
         // Provides button clicks handler
         permissionStatesView.buttonClickHandler { state: State, button: Button ->
             when (button.action.value) {
-                "ACTION_PERMISSION_STATE_1" -> permissionStatesView.apply("TAG_PERMISSION_STATE_1")
-                "ACTION_PERMISSION_STATE_2" -> permissionStatesView.apply("TAG_PERMISSION_STATE_2")
+                "ACTION_1" -> permissionStatesView.apply("TAG_PERMISSION_STATE_2")
+                "ACTION_2" -> permissionStatesView.apply("TAG_PERMISSION_STATE_1")
                 "ACTION_EMPTY_STATES" -> {
                     permissionStatesView.visibility = View.GONE
                     emptyStatesView.visibility = View.VISIBLE

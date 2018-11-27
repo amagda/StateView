@@ -9,37 +9,37 @@ class PermissionStatesProvider : StatesProvider {
 
     override fun provide(context: Context) = listOf(
         State(
-            "TAG_PERMISSION_STATE_1",
-            R.drawable.ic_permission_state,
-            "FIRST permission state title",
-            "First permission state subtitle",
-            listOf(
+            tag = "TAG_PERMISSION_STATE_1",
+            imgResId = R.drawable.ic_permission_state,
+            title = "FIRST permission state title",
+            subtitle = "First permission state subtitle",
+            buttons = listOf(
                 Button(
-                    "Permission state 2",
-                    "#156b62",
-                    "#FFFFFF",
-                    action = Button.Action(value = "ACTION_PERMISSION_STATE_2")
+                    text = "Action 1",
+                    textHexColor = "#156b62",
+                    bgHexColor = "#FFFFFF",
+                    action = Button.Action(type = "custom", value = "ACTION_1")
                 )
             )
         ),
 
         State(
-            "TAG_PERMISSION_STATE_2",
-            R.drawable.ic_permission_state,
-            "SECOND permission state title",
-            "Second permission state subtitle",
-            listOf(
+            tag = "TAG_PERMISSION_STATE_2",
+            imgResId = R.drawable.ic_permission_state,
+            title = "SECOND permission state title",
+            subtitle = "Second permission state subtitle",
+            buttons = listOf(
                 Button(
-                    "Permission state 1",
-                    "#156b62",
-                    "#FFFFFF",
-                    action = Button.Action(value = "ACTION_PERMISSION_STATE_1")
+                    text = "Action 2",
+                    textHexColor = "#156b62",
+                    bgHexColor = "#FFFFFF",
+                    action = Button.Action(type = "custom", value = "ACTION_2")
                 ),
                 Button(
-                    "Empty states",
-                    "#156b62",
-                    "#FFFFFF",
-                    action = Button.Action(value = "ACTION_EMPTY_STATES")
+                    text = "Empty states",
+                    textHexColor = "#156b62",
+                    bgHexColor = "#FFFFFF",
+                    action = Button.Action(type = "custom", value = "ACTION_EMPTY_STATES")
                 )
             )
         )
