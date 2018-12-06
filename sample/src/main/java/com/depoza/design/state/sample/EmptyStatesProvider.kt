@@ -7,7 +7,7 @@ import com.depoza.design.state.StatesProvider
 
 class EmptyStatesProvider : StatesProvider {
 
-    override fun provide(context: Context) = listOf(
+    override fun provide(context: Context) = mutableListOf(
         State(
             tag = "TAG_EMPTY_STATE_1",
             imgResId = R.drawable.ic_empty_state_1,
@@ -34,6 +34,12 @@ class EmptyStatesProvider : StatesProvider {
                     textHexColor = "#FFFFFF",
                     bgHexColor = "#FF6329",
                     action = Button.Action(type = "custom", value = "ACTION_2")
+                ),
+                Button(
+                    text = "Hide",
+                    textHexColor = "#FFFFFF",
+                    bgHexColor = "#FF6329",
+                    action = Button.Action(type = "custom", value = "HIDE")
                 ),
                 Button(
                     text = "Permission states",

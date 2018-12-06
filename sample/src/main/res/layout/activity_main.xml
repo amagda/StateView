@@ -13,7 +13,12 @@
             android:layout_height="match_parent"
             app:img_width="150dp"
             app:img_height="150dp"
-            android:visibility="gone"/>
+            android:visibility="gone">
+        <Button android:id="@+id/tv"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="ADD AGAIN"/>
+    </com.depoza.design.state.StateView>
 
     <com.depoza.design.state.sample.PermissionStateView
             android:id="@+id/permission_states_view"

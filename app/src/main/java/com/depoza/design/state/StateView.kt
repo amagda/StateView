@@ -2,10 +2,12 @@ package com.depoza.design.state
 
 import android.content.Context
 import android.content.res.TypedArray
-import android.support.annotation.LayoutRes
+import androidx.annotation.LayoutRes
 import android.util.AttributeSet
+import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
 import com.depoza.design.state.R.style.Widget_Depoza_Design_StateView
@@ -20,7 +22,7 @@ open class StateView @JvmOverloads constructor(
     private var curState: State? = null
     private var availableStates: List<State>? = null
     private var onBtnClickHandler: ((State, Button) -> Unit)? = null
-
+    private var stateView:LinearLayout? = null
     var imgView: ImageView? = null
     var titleTextView: TextView? = null
     var subtitleTextView: TextView? = null
@@ -33,6 +35,7 @@ open class StateView @JvmOverloads constructor(
         subtitleTextView = findViewById(R.id.subtitle_state_view)
         buttonsParentView = findViewById(R.id.buttons_parent_state_view)
         processAttrs(context, attrs, defStyleAttr)
+        stateView = this.findViewById(R.id.state_view)
     }
 
     /**
@@ -87,6 +90,11 @@ open class StateView @JvmOverloads constructor(
         refreshTitle(state)
         refreshSubtitle(state)
         refreshButtons(state)
+        stateView?.visibility = android.view.View.VISIBLE
+    }
+    open fun hide(view:View?=null){
+        (view?:stateView)?.visibility = android.view.View.GONE
+        curState = null
     }
 
 

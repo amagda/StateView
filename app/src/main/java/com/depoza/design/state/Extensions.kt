@@ -1,7 +1,7 @@
 package com.depoza.design.state
 
 import android.graphics.Color
-import android.support.annotation.ColorInt
+import androidx.annotation.ColorInt
 
 /**
  * Converts color-int to the corresponding color-string into the hex-format(for example #000000)

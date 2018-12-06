@@ -7,5 +7,5 @@ import android.content.Context
  */
 @FunctionalInterface
 interface StatesProvider {
-    fun provide(context: Context): List<State>
+    fun provide(context: Context): MutableList<State>
 }
