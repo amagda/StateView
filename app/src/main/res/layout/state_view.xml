@@ -1,41 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
+			  xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
               android:id="@+id/state_view"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:gravity="center"
               android:orientation="vertical">
+	
+	<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+		
+		<LinearLayout
+				android:id="@+id/buttons_parent_state_view"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/subtitle_state_view" app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				android:layout_marginEnd="16dp" android:layout_marginRight="16dp" android:layout_marginLeft="16dp"
+				android:layout_marginStart="16dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp"/>
+		<TextView
+				android:id="@+id/subtitle_state_view"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal"
+				android:textAppearance="@style/TextAppearance.Depoza.Design.Widget.StateView.Subtitle"
+				tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae felis consectetur, consequat neque sit amet, placerat mauris. Phasellus imperdiet lacus in quam fringilla, condimentum vestibulum dui maximus"
+				app:layout_constraintTop_toBottomOf="@+id/title_state_view"
+				app:layout_constraintBottom_toTopOf="@+id/buttons_parent_state_view"
+				app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+				android:layout_marginEnd="16dp" android:layout_marginRight="16dp" android:layout_marginLeft="16dp"
+				android:layout_marginStart="16dp" android:layout_marginTop="2dp" android:layout_marginBottom="8dp"/>
+		<TextView
+				android:id="@+id/title_state_view"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal"
+				android:textAppearance="@style/TextAppearance.Depoza.Design.Widget.StateView.Title"
+				tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+				app:layout_constraintTop_toBottomOf="@+id/img_state_view"
+				app:layout_constraintBottom_toTopOf="@+id/subtitle_state_view" android:layout_marginTop="8dp"
+				android:layout_marginBottom="2dp" app:layout_constraintStart_toStartOf="parent"
+				android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+				app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+				android:layout_marginRight="16dp"/>
+		<ImageView
+				android:id="@+id/img_state_view"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:visibility="gone"
+				android:scaleType="centerCrop"
+				tools:visibility="visible" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintBottom_toTopOf="@+id/title_state_view"
+				app:layout_constraintVertical_chainStyle="packed" app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+				android:layout_marginRight="16dp"/>
+	</androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-            android:id="@+id/img_state_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:visibility="gone"
-            tools:visibility="visible"/>
-
-    <TextView
-            android:id="@+id/title_state_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:gravity="center_horizontal"
-            android:textAppearance="@style/TextAppearance.Depoza.Design.Widget.StateView.Title"
-            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"/>
-
-    <TextView
-            android:id="@+id/subtitle_state_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:gravity="center_horizontal"
-            android:textAppearance="@style/TextAppearance.Depoza.Design.Widget.StateView.Subtitle"
-            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae felis consectetur, consequat neque sit amet, placerat mauris. Phasellus imperdiet lacus in quam fringilla, condimentum vestibulum dui maximus"/>
-
-    <LinearLayout
-            android:id="@+id/buttons_parent_state_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"/>
 </LinearLayout>
