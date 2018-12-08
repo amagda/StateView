@@ -10,7 +10,7 @@ Android View to display different customizable states (Error, Empty, Permissions
 ## Setup
 ```java
 dependencies {
-    compile 'com.depoza.design:state-view:X.Y.Z'
+    implementation 'com.depoza.design:state-view:X.Y.Z'
 }
 ```
 
