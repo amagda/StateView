@@ -11,7 +11,7 @@ ext {
     libraryDescription = 'Android View to display different customizable states (Error, Empty, Permissions and etc.)'
     libraryGroupId = 'com.depoza.design'
     libraryArtifact = 'state-view'
-    libraryVersion = '1.0'
+    libraryVersion = '1.0.1'
 
     urlSite = 'https://github.com/amagda/StateView'
     urlVcs = 'https://github.com/amagda/StateView.git'
