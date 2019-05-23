@@ -1,36 +1,20 @@
 package com.depoza.design.state
 
 import android.content.Context
-import androidx.annotation.ColorInt
-import androidx.core.graphics.drawable.DrawableCompat
-import androidx.core.view.ViewCompat
-import androidx.appcompat.widget.AppCompatButton
-import android.util.TypedValue
 import android.widget.Button
+import com.google.android.material.button.MaterialButton
 
 /**
  * Creates Android Button widget based on [Button] description
  */
 fun com.depoza.design.state.Button.createView(context: Context): Button {
-    val result = AppCompatButton(context)
-    result.text = this.text
-    this.textHexColor?.let { result.setTextColor(it.toIntColor()) }
-
-    if (this.bgHexColor.isNullOrBlank()) {
-        val outValue = TypedValue()
-        context.theme.resolveAttribute(R.attr.selectableItemBackground, outValue, true)
-        result.setBackgroundResource(outValue.resourceId)
-    } else {
-        result.applyBackgroundColor(bgHexColor!!.toIntColor())
+    val btn = this
+    return MaterialButton(context).run {
+        text = btn.text
+        isAllCaps = true
+        if (!btn.textHexColor.isNullOrBlank()) setTextColor(btn.textHexColor.toIntColor())
+        if (!btn.bgHexColor.isNullOrBlank()) setBackgroundColor(btn.bgHexColor.toIntColor())
+        setRippleColorResource(R.color.state_view_btn_ripple_color)
+        this
     }
-    return result
-}
-
-/**
- * Applies new [color] to the Android Button widget
- */
-fun Button.applyBackgroundColor(@ColorInt color: Int) {
-    val btnDrawable = DrawableCompat.wrap(this.background)
-    DrawableCompat.setTint(btnDrawable, color)
-    ViewCompat.setBackground(this, btnDrawable)
 }

@@ -2,4 +2,5 @@
 <resources>
     <color name="state_view_title_color">#222222</color>
     <color name="state_view_subtitle_color">#555555</color>
+    <color name="state_view_btn_ripple_color">#11000000</color>
 </resources>

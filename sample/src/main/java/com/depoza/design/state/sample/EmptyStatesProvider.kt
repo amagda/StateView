@@ -37,7 +37,8 @@ class EmptyStatesProvider : StatesProvider {
                 ),
                 Button(
                     text = "Permission states",
-                    textHexColor = "#156B62",
+                    textHexColor = "#FFFFFF",
+                    bgHexColor = "#156B62",
                     action = Button.Action(type = "custom", value = "ACTION_PERMISSION_STATES")
                 )
             )
