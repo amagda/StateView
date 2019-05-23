@@ -1,10 +1,10 @@
 package com.depoza.design.state
 
 import android.content.Context
-import android.support.annotation.ColorInt
-import android.support.v4.graphics.drawable.DrawableCompat
-import android.support.v4.view.ViewCompat
-import android.support.v7.widget.AppCompatButton
+import androidx.annotation.ColorInt
+import androidx.core.graphics.drawable.DrawableCompat
+import androidx.core.view.ViewCompat
+import androidx.appcompat.widget.AppCompatButton
 import android.util.TypedValue
 import android.widget.Button
 

@@ -2,10 +2,10 @@ package com.depoza.design.state
 
 import android.content.Context
 import android.content.res.TypedArray
-import android.support.annotation.LayoutRes
+import androidx.annotation.LayoutRes
+import androidx.appcompat.widget.AppCompatImageView
 import android.util.AttributeSet
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import com.depoza.design.state.R.style.Widget_Depoza_Design_StateView
@@ -21,7 +21,7 @@ open class StateView @JvmOverloads constructor(
     private var availableStates: List<State>? = null
     private var onBtnClickHandler: ((State, Button) -> Unit)? = null
 
-    var imgView: ImageView? = null
+    var imgView: AppCompatImageView? = null
     var titleTextView: TextView? = null
     var subtitleTextView: TextView? = null
     var buttonsParentView: ViewGroup? = null

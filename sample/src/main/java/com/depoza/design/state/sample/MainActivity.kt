@@ -1,7 +1,7 @@
 package com.depoza.design.state.sample
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import com.depoza.design.state.Button
 import com.depoza.design.state.State

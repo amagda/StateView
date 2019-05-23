@@ -1,6 +1,6 @@
 package com.depoza.design.state
 
-import android.support.annotation.DrawableRes
+import androidx.annotation.DrawableRes
 import java.io.Serializable
 
 /**
